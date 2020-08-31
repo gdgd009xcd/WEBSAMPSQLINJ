@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: ./docker/web/
+    ports:
+      - 8110:80
+    volumes:
+      - ./docker/web/html:/var/www/html
+      - ./docker/web/tmp:/home/tmp
+    depends_on:
+      - db
+  db:
+    build: ./docker/db/
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5433:5432
+    volumes:
+      - ./docker/db/data:/var/lib/postgresql/data
+      - ./docker/db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
