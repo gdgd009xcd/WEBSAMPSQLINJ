@@ -24,10 +24,11 @@ This sample application consists of following items:
        # curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
        # chmod +x /usr/local/bin/docker-compose
 </PRE>
-3. download .tgz file from RELEASE page, and extract .tgz file, and create apache_php_pgsql/docker/db/data folder for database persistence
+3. download Source code WEBSAMPSQLINJ-N.N.N.tar.gz file from RELEASE page, and extract .tar.gz file, and create apache_php_pgsql/docker/db/data folder for database persistence
 <PRE>
-$ tar xzvf WEBSAMPSQLINJ.tgz
-$ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/db
+e.g. version number N.N.N is 0.5.0
+$ tar xzvf WEBSAMPSQLINJ-0.5.0.tgz
+$ cd WEBSAMPSQLINJ-0.5.0/apache_php_pgsql/docker/db
 $ mkdir data
  
 </PRE>
