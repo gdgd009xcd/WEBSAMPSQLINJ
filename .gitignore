@@ -1,3 +1,3 @@
 apache_php_pgsql/docker/db/data
-apache_php_pgsql/docker/web/html
+apache_php_pgsql/docker/web/tmp
 .idea/
