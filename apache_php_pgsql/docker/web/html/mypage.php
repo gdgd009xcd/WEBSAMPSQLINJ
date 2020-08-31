@@ -91,9 +91,9 @@ $_SESSION['htoken'] = $htoken;
 ?>
 <html>
 <head>
-<tltle>
+<title>
 MYPAGE
-</tltle>
+</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script>
   $(document).ready(function() {
@@ -155,7 +155,7 @@ MYPAGE
   </script>
 </head>
 <body>
-
+<A HREF="help.html" target="_blank">HELP USAGE</A>
 <P> welcome user:<?php echo $user; ?><P>
 <?php
 if ($sqlprint == 1) {

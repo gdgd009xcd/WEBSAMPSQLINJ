@@ -46,10 +46,11 @@ if (!empty($ERRORMESS)){
 <?php
 }
 ?>
+<A HREF="help.html" target="_blank">HELP USAGE</A><P>
 <form action="mypage.php" method="POST">
 user:<input type="text" name="user" value=""><BR>
 pass:<input type="password" name="pass" value=""><BR>
-<input type ="checkbox" name="sqlprint" value="Print SQL for debug">SQL debug print<BR>
+<input type ="checkbox" name="sqlprint" value="Print SQL for debug">Check to display SQL statement on screen<BR>
 <input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
 <?php
 
@@ -64,7 +65,7 @@ if( !empty($DB) ){
 ?>
 <HR>
 <form action="newuser.php" method="GET">
-<input type ="checkbox" name="sqlprint" value="Print SQL for debug">SQL debug print<BR>
+<input type ="checkbox" name="sqlprint" value="Print SQL for debug">Check to display SQL statement on screen<BR>
 <input type="submit" value="Regist New User">
 <input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
 </form>

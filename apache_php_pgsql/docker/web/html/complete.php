@@ -119,9 +119,9 @@ if(!empty($DB) && $DB === "1" ){
 ?>
 <html>
 <head>
-<tltle>
+<title>
 Entry completed
-</tltle>
+</title>
 </head>
 <body>
 

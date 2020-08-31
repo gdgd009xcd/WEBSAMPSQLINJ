@@ -59,9 +59,9 @@ $_SESSION['token2'] = $randomval;
 ?>
 <html>
 <head>
-<tltle>
+<title>
 Entry input
-</tltle>
+</title>
 </head>
 <body>
 

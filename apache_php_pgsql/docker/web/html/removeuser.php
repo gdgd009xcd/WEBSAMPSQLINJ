@@ -64,9 +64,9 @@ if ( $step == 0 ){
 ?>
 <html>
 <head>
-<tltle>
+<title>
 Revoke user
-</tltle>
+</title>
 </head>
 <body>
 

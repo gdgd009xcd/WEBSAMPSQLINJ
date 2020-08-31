@@ -74,9 +74,9 @@ $result = execsql($link, $sql);
 
 <html>
 <head>
-<tltle>
+<title>
 your registered entry list
-</tltle>
+</title>
 </head>
 <body>
 

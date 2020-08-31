@@ -114,9 +114,9 @@ if(($sts=move_uploaded_file($tmp_path, $uploadTo))==TRUE){
 ?>
 <html>
 <head>
-<tltle>
+<title>
 Entry confirmation
-</tltle>
+</title>
 </head>
 <body>
 

@@ -109,9 +109,9 @@ if( $step == 0
 
 <html>
 <head>
-<tltle>
+<title>
 Regist new user
-</tltle>
+</title>
 </head>
 <body>
 
