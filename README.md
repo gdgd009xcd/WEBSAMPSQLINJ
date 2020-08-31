@@ -45,7 +45,7 @@ $ su -
 
 2. In apache_php_pgsql dir, execute following docker-compose command.
 <PRE>
-# cd apache_php_pgsql
+# cd WEBSAMPSQLINJ/apache_php_pgsql
 # docker-compose up -d
 </PRE>
 
@@ -53,7 +53,7 @@ $ su -
 
 1. In apache_php_pgsql dir, execute following docker-compose command.
 <PRE>
-# cd apache_php_pgsql
+# cd WEBSAMPSQLINJ/apache_php_pgsql
 # docker-compose down
 </PRE>
 
