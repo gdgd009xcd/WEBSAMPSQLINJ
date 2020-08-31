@@ -65,6 +65,10 @@ $ su -
 ### URL of application 
 1. Access http://localhost:8110/ in your browser.
 
+### Usage of application
+1. Access http://localhost:8110/help.html 
+ 
+
 
 
 
