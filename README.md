@@ -27,21 +27,15 @@ This sample application consists of following items:
 3. download .tgz file from RELEASE page, and extract .tgz file, and create apache_php_pgsql/docker/db/data folder.
 <PRE>
 $ tar xzvf xxxx.tgz
-$ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/
-$ mkdir -p  db/data
-$ mkdir docker/web/tmp
-$ cd  docker/web
-$ chmod 777 tmp
+$ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/db
+$ mkdir data
  
 </PRE>
 or clone git and create dir.
 <PRE>
-$ git clone xxxx
-$ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/
-$ mkdir -p  db/data
-$ mkdir docker/web/tmp
-$ cd  docker/web
-$ chmod 777 tmp
+$ git clone https://github.com/gdgd009xcd/WEBSAMPSQLINJ.git
+$ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/db
+$ mkdir data
  
 </PRE>
 

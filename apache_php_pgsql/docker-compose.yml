@@ -7,7 +7,6 @@ services:
       - 8110:80
     volumes:
       - ./docker/web/html:/var/www/html
-      - ./docker/web/tmp:/home/tmp
     depends_on:
       - db
   db:

@@ -101,7 +101,7 @@ $_SESSION['mailaddr'] =  $mailaddr;
 $_SESSION['imgfile'] =  $imgfile;
 $_SESSION['tmp_path'] =  $tmp_path;
 
-$uploadTo = "/home/tmp/$imgfile";
+$uploadTo = "/home/tmp/" . $randomval . "_ " . $imgfile;
 $errmovefile = "";
 if(($sts=move_uploaded_file($tmp_path, $uploadTo))==TRUE){
    $_SESSION['showfile'] = 'showfile.php?path=' . $uploadTo;
