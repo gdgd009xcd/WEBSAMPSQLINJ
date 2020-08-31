@@ -26,7 +26,7 @@ This sample application consists of following items:
 </PRE>
 3. download .tgz file from RELEASE page, and extract .tgz file, and create apache_php_pgsql/docker/db/data folder for database persistence
 <PRE>
-$ tar xzvf xxxx.tgz
+$ tar xzvf WEBSAMPSQLINJ.tgz
 $ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/db
 $ mkdir data
  
