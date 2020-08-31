@@ -24,7 +24,7 @@ This sample application consists of following items:
        # curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
        # chmod +x /usr/local/bin/docker-compose
 </PRE>
-3. download .tgz file from RELEASE page, and extract .tgz file, and create apache_php_pgsql/docker/db/data folder.
+3. download .tgz file from RELEASE page, and extract .tgz file, and create apache_php_pgsql/docker/db/data folder for database persistence
 <PRE>
 $ tar xzvf xxxx.tgz
 $ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/db
