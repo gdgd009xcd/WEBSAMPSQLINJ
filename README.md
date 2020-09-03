@@ -20,24 +20,24 @@ This sample application consists of following items:
  
 URL: http://localhost:8110/
 
-index.php(login page)
+1.index.php(login page)
   |
-  |-[Regist New User]->newuser.php-[Confirm]->newuser.php-[Complete]->newuser.php(*SQL)->[Login]->index.php
+  |-[Regist New User]->2-1.newuser.php-[Confirm]->2-2.newuser.php-[Complete]->2-3.newuser.php(*SQL)->[Login]->index.php
   |
-  |-[Login]-->mypage.php(*SQL)
+  |-[Login]-->3.mypage.php(*SQL)
                 |
-                |-[Modify user]-->moduser.php-[Confirm]->moduser.php-[Complete]->moduser.php(*SQL)-[Return to MYPAGE]->mypage.php
+                |-[Modify user]-->3.1.moduser.php-[Confirm]->3.2.moduser.php-[Complete]->3.3.moduser.php(*SQL)-[Return to MYPAGE]->mypage.php
                 |
-                |-[Regist entry]-->inquiry.php-[Confirm]->confirm.php-[Complete]->complete.php(*SQL)-[Return to MYPAGE]->mypage.php
+                |-[Regist entry]-->4.1.inquiry.php-[Confirm]->4.2.confirm.php-[Complete]->4.3.complete.php(*SQL)-[Return to MYPAGE]->mypage.php
                 |                                                                       |
-                |                                                                       |-[xxx.img]->showfile.php(*path)
+                |                                                                       |-[xxx.img]->4.4.showfile.php(*path)
                 |
-                |-[Show your registered Entry list]->inquirylist.php(*SQL)-[Search]->inquirylist.php(*SQL)-[Return to MYPAGE]->mypage.php
+                |-[Show your registered Entry list]->5.1.inquirylist.php(*SQL)-[Search]->5.2.inquirylist.php(*SQL)-[Return to MYPAGE]->mypage.php
                 |                                            |                          |
-                |                                            |---------[xxx.img]---------->showfile.php(*path)
+                |                                            |---------[xxx.img]---------->5.3.showfile.php(*path)
                 |
                 |
-                |-[Revoke user]-->removeuser.php-[Revoke]->removeuser.php(*SQL)-[Login]->index.php
+                |-[Revoke user]-->6.1.removeuser.php-[Revoke]->6.2.removeuser.php(*SQL)-[Login]->index.php
 </PRE>
 
 
