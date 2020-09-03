@@ -12,6 +12,35 @@ This sample application consists of following items:
 * docker
 * docker-compose
 
+### Sitemap
+
+<PRE>
+ *SQL - A php script that execute SQL statement
+ *path - A php script that reads and displays the specified file
+ 
+URL: http://localhost:8110/
+
+index.php(login page)
+  |
+  |-[Regist New User]->newuser.php-[Confirm]->newuser.php-[Complete]->newuser.php(*SQL)->[Login]->index.php
+  |
+  |-[Login]-->mypage.php(*SQL)
+                |
+                |-[Modify user]-->moduser.php-[Confirm]->moduser.php-[Complete]->moduser.php(*SQL)-[Return to MYPAGE]->mypage.php
+                |
+                |-[Regist entry]-->inquiry.php-[Confirm]->confirm.php-[Complete]->complete.php(*SQL)-[Return to MYPAGE]->mypage.php
+                |                                                                       |
+                |                                                                       |-[xxx.img]->showfile.php(*path)
+                |
+                |-[Show your registered Entry list]->inquirylist.php(*SQL)-[Search]->inquirylist.php(*SQL)-[Return to MYPAGE]->mypage.php
+                |                                            |                          |
+                |                                            |---------[xxx.img]---------->showfile.php(*path)
+                |
+                |
+                |-[Revoke user]-->removeuser.php-[Revoke]->removeuser.php(*SQL)-[Login]->index.php
+</PRE>
+
+
 ### install & setup 
 
 1. If your os does not have docker, Please read: https://docs.docker.com/get-docker/
