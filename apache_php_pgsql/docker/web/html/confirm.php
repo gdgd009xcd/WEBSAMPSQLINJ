@@ -64,7 +64,7 @@ Entry Input
 </tltle>
 </head>
 <body>
-
+<H2>Entry input</H2>
 <P> user:<?php echo $user; ?>
 
 <form action="confirm.php" method="POST">
@@ -119,7 +119,7 @@ Entry confirmation
 </title>
 </head>
 <body>
-
+<H2>Entry confirm</H2>
 <P> user:<?php echo $user; ?>
 
 <form action="complete.php" method="POST">

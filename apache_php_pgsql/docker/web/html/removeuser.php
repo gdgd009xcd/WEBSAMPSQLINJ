@@ -69,7 +69,7 @@ Revoke user
 </title>
 </head>
 <body>
-
+<H2>Revoke user</H2>
 <P>
 user: <?php echo $user; ?>
 <P>
@@ -130,6 +130,7 @@ Revoke user completed
 </tltle>
 </head>
 <body>
+<H2>Revoke user completed</H2>
 <P> Your user account has Revoked. Good-bye.
 <P> user:<?php echo $user; ?>
 <?php

@@ -59,7 +59,7 @@ if ($step == 0) {
         $oldpassword = $rows['password'];
         $oldage = $rows['age'];
     }
-    if (!empty($oldpassword) ){
+    if ($i > 0){
         $_SESSION['oldpassword'] = $oldpassword;
         $_SESSION['oldage'] = $oldage;
     } else {
@@ -147,6 +147,7 @@ modify user
 </head>
 <body>
 
+<H2>Modify User Input</H2>
 <P>
 <?php
     if (!empty($errormess) ) {
@@ -195,7 +196,7 @@ mod user confirmation
 </tltle>
 </head>
 <body>
-
+<H2>Modify User Confirm</H2>
 <P> user:<?php echo $user; ?>
 
 <form action="moduser.php" method="POST">
@@ -257,6 +258,7 @@ user mod completed
 </tltle>
 </head>
 <body>
+<H2>Modify User Completed</H2>
 <P> your user account has modified.
 <P> user:<?php echo $user; ?>
 <?php

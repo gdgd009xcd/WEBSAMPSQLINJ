@@ -114,7 +114,7 @@ Regist new user
 </title>
 </head>
 <body>
-
+<H2>Regist new user input</H2>
 <P>
 <?php
     if (!empty($errormess) ) {
@@ -156,7 +156,7 @@ Regist user confirmation
 </tltle>
 </head>
 <body>
-
+<H2>Regist new user confirm</H2>
 <P> user:<?php echo $user; ?>
 
 <form action="newuser.php" method="POST">
@@ -222,6 +222,7 @@ Regist user completed
 </tltle>
 </head>
 <body>
+<H2>Regist new user completed</H2>
 <P> Your user account has registered. Thank you.
 <P> user:<?php echo $user; ?>
 <?php

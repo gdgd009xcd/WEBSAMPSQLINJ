@@ -79,7 +79,7 @@ your registered entry list
 </title>
 </head>
 <body>
-
+<H2>Show your registered entries</H2>
 <P> user:<?php echo $user; ?><P>
 <?php
 if ($sqlprint == 1) {

@@ -64,7 +64,7 @@ Entry input
 </title>
 </head>
 <body>
-
+<H2>Entry input</H2>
 <P> user:<?php echo $user; ?>
 
 <form action="confirm.php" method="POST" enctype="multipart/form-data">

@@ -124,7 +124,7 @@ Entry completed
 </title>
 </head>
 <body>
-
+<H2>Entry registered.</H2>
 <P> user:<?php echo $user; ?>
 
 <?php

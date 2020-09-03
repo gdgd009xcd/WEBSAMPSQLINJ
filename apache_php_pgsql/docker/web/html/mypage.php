@@ -155,6 +155,7 @@ MYPAGE
   </script>
 </head>
 <body>
+<H2>MYPAGE</H2>
 <A HREF="help.html" target="_blank">HELP USAGE</A>
 <P> welcome user:<?php echo $user; ?><P>
 <?php
