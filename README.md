@@ -15,7 +15,7 @@ This sample application consists of following items:
 ### Sitemap
 
 <PRE>
- *SQL - A php script that execute SQL statement
+ *SQL - A PHP script that executes SQL statements. All SQL statements are vulnerable.
  *path - A php script that reads and displays the specified file
  
 URL: http://localhost:8110/
