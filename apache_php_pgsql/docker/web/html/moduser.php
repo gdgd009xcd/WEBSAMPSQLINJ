@@ -86,6 +86,10 @@ if($step == 0){
 }else if ($step == 1) {
     $password = $_POST['password'];
     $age = $_POST['age'];
+    $dummyLineData = $_POST['dummyLineData'];
+    if (!is_numeric($dummyLineData)) {
+      $dummyLineData = "";
+    }
 }
 
 if( $step > 1 && isset($_SESSION['password'])){
@@ -95,6 +99,10 @@ if( $step > 1 && isset($_SESSION['password'])){
 
 if( $step > 1 && isset($_SESSION['age'])){
     $age = $_SESSION['age'];
+}
+
+if( $step > 1 && isset($_SESSION['dummyLineData'])){
+    $dummyLineData = $_SESSION['dummyLineData'];
 }
 
 $prevtoken1 = $_SESSION['token1'];
@@ -160,9 +168,26 @@ modify user
 <form action="moduser.php" method="POST">
 <input type="hidden" name="token1" value="<?php echo $randomval; ?>">
 username: <?php echo $user; ?><BR>
+<?php
+if ( !isset($_GET['nopassword'] )) {
+?>
 password<input type="password" name="password" value=""><BR>
+<?php
+}
+?>
 age<input type="text" name="age" value="<?php echo $age; ?>" >
 <BR>
+
+<?php
+if ( isset($_SESSION['printDummy']) ) {
+?>
+
+generate dummy line count:<input type="text" name="dummyLineData" value="">
+<BR>
+
+<?php
+}
+?>
 
 
 <input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
@@ -188,6 +213,10 @@ age<input type="text" name="age" value="<?php echo $age; ?>" >
     }
     $_SESSION['password'] = $password;
     $_SESSION['age'] = $age;
+
+    if (isset($dummyLineData) && !empty($dummyLineData)) {
+       $_SESSION['dummyLineData'] = $dummyLineData;
+    }
 ?>
 <html>
 <head>
@@ -242,14 +271,53 @@ confirm your input below, then press complete button. <BR>
         $result = pg_query($link, $sql);
         if (!$result) {
             $ERRORMESS = pg_last_error($link);
-            header('location: index.php?errormess=' . urlencode($ERRORMESS));
-            exit(-1);
         }
         pg_close($link);
         clearSessionTokens();
         unset($_SESSION[$stepname]);
         $step = 0;
 
+if (isset($ERRORMESS) ){
+?>
+<html>
+<head>
+<tltle>
+user mod failed.
+</tltle>
+</head>
+<body>
+<H2>Modify User failed.</H2>
+<P> your user account has NOT modified.
+<font color="red" ><?php echo $ERRORMESS; ?></font><P>
+<P> user:<?php echo $user; ?>
+<?php
+if ($sqlprint == 1) {
+?>
+    <P> SQL[<?php echo $sql; ?>]<P>
+<?php
+}
+?>
+<P>
+<form action="moduser.php" method = "POST">
+<INPUT type="HIDDEN" name="cancel" value="1">
+<input type="submit"  value="Return to MYPAGE">
+<input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
+</form>
+<?php
+   if (isset($_SESSION['dummyLineData']) ){
+     $lineDataCnt = $_SESSION['dummyLineData'];
+     for ($i = 0; $i < $lineDataCnt; $i++ ){
+?>
+<!-- dummyLine Data no:<?php echo $i; ?> --><BR>
+<?php
+     }
+   }
+?>
+</body>
+</html>
+
+<?php
+}else{
 ?>
 <html>
 <head>
@@ -274,9 +342,20 @@ if ($sqlprint == 1) {
 <input type="submit"  value="Return to MYPAGE">
 <input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
 </form>
+<?php
+   if (isset($_SESSION['dummyLineData']) ){
+     $lineDataCnt = $_SESSION['dummyLineData'];
+     for ($i = 0; $i < $lineDataCnt; $i++ ){
+?>
+<!-- dummyLine Data no:<?php echo $i; ?> --><BR>
+<?php
+     }
+   }
+?>
 </body>
 </html>
 <?php
-    exit(0);
+}
+exit(0);
 }
 ?>

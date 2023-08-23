@@ -26,6 +26,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(isset($_POST['sqlprint'])){
         $_SESSION['sqlprint'] = 1;
     }
+    if(isset($_POST['printDummy'])){
+        $_SESSION['printDummy'] = 1;
+    }
 
     if(isset($_SESSION['sqlprint'])) {
         $sqlprint = 1;
@@ -169,7 +172,12 @@ if ($sqlprint == 1) {
 
 <form action="moduser.php" method="GET">
 Modify your account info :
-<input type="submit" value="Modify user">
+<input type="submit" value="Modify your account info">
+</form><BR>
+<form action="moduser.php" method="GET">
+Modify your age :
+<input type="hidden" name="nopassword" value="1">
+<input type="submit" value="Modify your age">
 </form>
 <HR>
 
