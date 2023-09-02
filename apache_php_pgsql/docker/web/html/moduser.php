@@ -319,29 +319,15 @@ if ($sqlprint == 1) {
 <?php
 }else{
 ?>
-<html>
-<head>
-<tltle>
-user mod completed
-</tltle>
-</head>
-<body>
-<H2>Modify User Completed</H2>
-<P> your user account has modified.
-<P> user:<?php echo $user; ?>
+<html><head><tltle>user_mod_completed</tltle></head><body><H2>Modify_User_Completed</H2><P>your_user_account_has_modified.<P>user:<?php echo $user; ?>
 <?php
 if ($sqlprint == 1) {
 ?>
-    <P> SQL[<?php echo $sql; ?>]<P>
+<P>SQL[<?php echo $sql; ?>]<P>
 <?php
 }
 ?>
-<P>
-<form action="moduser.php" method = "POST">
-<INPUT type="HIDDEN" name="cancel" value="1">
-<input type="submit"  value="Return to MYPAGE">
-<input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
-</form>
+<P><form action="moduser.php" method = "POST"><INPUT type="HIDDEN" name="cancel" value="1"><input type="submit"  value="Return to MYPAGE"><input type="hidden" name="dummy" value="<?php echo $randomval; ?>"></form>
 <?php
    if (isset($_SESSION['dummyLineData']) ){
      $lineDataCnt = $_SESSION['dummyLineData'];
@@ -352,8 +338,7 @@ if ($sqlprint == 1) {
      }
    }
 ?>
-</body>
-</html>
+</body></html>
 <?php
 }
 exit(0);
