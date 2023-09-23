@@ -304,7 +304,7 @@ if ($sqlprint == 1) {
 <input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
 </form>
 <?php
-   if (isset($_SESSION['dummyLineData']) ){
+   if (isset($_SESSION['dummyLineData']) && false){
      $lineDataCnt = $_SESSION['dummyLineData'];
      for ($i = 0; $i < $lineDataCnt; $i++ ){
 ?>
