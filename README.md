@@ -10,7 +10,7 @@ This sample application consists of following items:
 ### Prerequisite
 
 * docker
-* docker-compose
+* docker compose
 
 ### Sitemap
 
@@ -50,7 +50,7 @@ URL: http://localhost:8110/
    1) Check whether did you get the "docker compose" tool
    <PRE>
    $ docker compose
-     docker: 'composes' is not a docker command. <- no installed
+     docker: 'compose' is not a docker command. <- no installed
        ..OR...
      Usage:  docker compose [OPTIONS] COMMAND <- You have it. installed.
    </PRE>
@@ -77,13 +77,13 @@ e.g. (on Ubuntu 22.04)
 $ sudo systemctl start docker
 </PRE>
 
-1. In apache_php_pgsql dir, execute following docker-compose command.
+1. In apache_php_pgsql dir, execute following docker compose command.
 <PRE>
  $ cd WEBSAMPSQLINJ/apache_php_pgsql
  $ sudo docker compose up -d
 </PRE>
 ### stop application
-1. In apache_php_pgsql dir, execute following docker-compose command.
+1. In apache_php_pgsql dir, execute following docker compose command.
 <PRE>
  $ cd WEBSAMPSQLINJ/apache_php_pgsql
  $ sudo docker compose down
