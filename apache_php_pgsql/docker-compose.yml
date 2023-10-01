@@ -10,6 +10,7 @@ services:
     depends_on:
       - db
   db:
+    image: postgres:15
     build: ./docker/db/
     environment:
       POSTGRES_PASSWORD: password

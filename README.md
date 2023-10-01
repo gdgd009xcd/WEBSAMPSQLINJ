@@ -43,52 +43,50 @@ URL: http://localhost:8110/
 
 ### install & setup 
 
-1. If your os does not have docker, Please read: https://docs.docker.com/get-docker/
-<PRE> e.g.  # yum install docker</PRE>  
+1. If your os does not have docker, Please read: https://docs.docker.com/get-docker/ and follow the instructions.
 
 
-2. If your os does not have docker-compose command, Please read: https://docs.docker.com/compose/install/
-<PRE>  
- e.g.  $ su -
-       # curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-       # chmod +x /usr/local/bin/docker-compose
-</PRE>
-3. download Source code WEBSAMPSQLINJ-N.N.N.tar.gz file from RELEASE page, and extract .tar.gz file, and create apache_php_pgsql/docker/db/data folder for database persistence
+1. If you does not have "docker compose" tool, Please read: https://docs.docker.com/compose/install/
+   1) Check whether did you get the "docker compose" tool
+   <PRE>
+   $ docker compose
+     docker: 'composes' is not a docker command. <- no installed
+       ..OR...
+     Usage:  docker compose [OPTIONS] COMMAND <- You have it. installed.
+   </PRE>
+   2) if you don't have compose tool, read https://docs.docker.com/compose/install/ carefully, and follow the instructions.
+
+1. download Source code WEBSAMPSQLINJ-N.N.N.tar.gz file from RELEASE page, and extract .tar.gz file, and create apache_php_pgsql/docker/db/data folder for database persistence
 <PRE>
 e.g. version number N.N.N is 0.5.0
 $ tar xzvf WEBSAMPSQLINJ-0.5.0.tgz
 $ cd WEBSAMPSQLINJ-0.5.0/apache_php_pgsql/docker/db
 $ mkdir data
- 
-</PRE>
+ </PRE>
 or clone git and create dir.
 <PRE>
 $ git clone https://github.com/gdgd009xcd/WEBSAMPSQLINJ.git
 $ cd WEBSAMPSQLINJ/apache_php_pgsql/docker/db
 $ mkdir data
- 
 </PRE>
 
 ### start application
-1. Start docker using your OS method
+1. if your os did'nt start docker, Start docker using your OS method
 <PRE>
-e.g. (on CentOS 7)
-$ su -
-# systemctl start docker
+e.g. (on Ubuntu 22.04)
+$ sudo systemctl start docker
 </PRE>
-
-2. In apache_php_pgsql dir, execute following docker-compose command.
-<PRE>
-# cd WEBSAMPSQLINJ/apache_php_pgsql
-# docker-compose up -d
-</PRE>
-
-### stop application
 
 1. In apache_php_pgsql dir, execute following docker-compose command.
 <PRE>
-# cd WEBSAMPSQLINJ/apache_php_pgsql
-# docker-compose down
+ $ cd WEBSAMPSQLINJ/apache_php_pgsql
+ $ sudo docker compose up -d
+</PRE>
+### stop application
+1. In apache_php_pgsql dir, execute following docker-compose command.
+<PRE>
+ $ cd WEBSAMPSQLINJ/apache_php_pgsql
+ $ sudo docker compose down
 </PRE>
 
 ### URL of application 

@@ -1,3 +1,3 @@
-FROM postgres:9.3
+FROM postgres:15
 ENV LANG en_US.utf8
 
