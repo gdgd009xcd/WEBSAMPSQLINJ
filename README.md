@@ -93,7 +93,15 @@ $ sudo systemctl start docker
 1. Access http://localhost:8110/ in your browser.
 
 ### Usage of application
-1. Access http://localhost:8110/help.html 
+1. Access http://localhost:8110/help.html
+ 
+### Uninstall
+1. if you are running this application, you must stop application using above instructions.
+   and simply delete WEBSAMPSQLINJ folder.
+<PRE>
+ e.g. (on ubuntu 22.04)
+ $ sudo rm -fr WEBSAMPSQLINJ
+</PRE>
  
 
 
