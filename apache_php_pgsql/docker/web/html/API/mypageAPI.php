@@ -19,7 +19,7 @@ $DB = $_POST['DB'];
 if(isset($_POST['base64'])){
 	header("Content-Type: application/json");
 	$base64 = $_POST['base64'];
-	$decoded = rawurldecode(base64_decode($base64));
+	$decoded = urldecode(base64_decode($base64));
 	$decodedArray = json_decode($decoded, true);
 	if (is_null($decodedArray)) {
 		$results['login'] = 'FAILED';
