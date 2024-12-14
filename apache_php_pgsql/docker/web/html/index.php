@@ -71,6 +71,7 @@ if( !empty($DB) ){
 <input type="hidden" name="dummy" value="<?php echo $randomval; ?>">
 </form>
 <HR>
+<A href="/API/indexAPI.php">Goto API login page</A>
 <?php
 }
 ?>
