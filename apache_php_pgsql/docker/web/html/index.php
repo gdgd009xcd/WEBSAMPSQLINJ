@@ -72,6 +72,7 @@ if( !empty($DB) ){
 </form>
 <HR>
 <A href="/API/indexAPI.php">Goto API login page</A>
+<HR>
 <?php
 }
 ?>
