@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>crazyeval.sh</title>
+<link rel="stylesheet" href="options.css"/>
+</head>
+<body>
+	<H1>shell execute test</h1>
+
+	<H3 class="annotation" >* WARNING:<br> In this "crazyeval.sh" script, functions with names prefixed with _dangerous can execute any command you specify.<br>
+        This could potentially damage your Docker containers or your hosts connected to your network.<br>
+        Do not expose this cgi to other networks or hosts you do not recognized. <br>
+	Currently, these functions disabled by commment out.<br>
+        if you want to enable it, you must edit crazyeval.sh to remove comment out.<br>
+        and apply chmod command like "chmod o+rx crazyeval.sh" to crazyeval.sh
+
+
+</H3>
+
+
+	<A href="cgi-bin/crazyeval.sh?bash%20pwd">crazyeval.sh shell test1</A><br>
+	<A href="cgi-bin/crazyeval.sh?q=`pwd`">crazyeval.sh shell test2</A><br>
+	<A href="cgi-bin/crazyeval.sh?q=$(pwd)">crazyeval.sh shell test3</A>
+</body>
+</html>

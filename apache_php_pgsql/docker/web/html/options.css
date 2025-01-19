@@ -1,0 +1,37 @@
+#scan-target-hosts {
+  display: block;
+  margin-top: 1em;
+}
+#no-proxy-url-regex {
+    width: 80%;
+}
+
+.rectangle {
+    width:95%;
+    border: 2px solid black;
+    padding: 4px;
+}
+
+.normalmargin {
+    /* up right under left margins. */
+    margin: 3px 3px 3px 3px;
+}
+
+.bottommargin {
+    /* up right under left margins. */
+    margin: 3px 3px 10px 3px;
+}
+
+.annotation {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.title {
+    font-weight: bold;
+    font-style: normal;
+}
+
+textarea {
+    width: 80%;
+}

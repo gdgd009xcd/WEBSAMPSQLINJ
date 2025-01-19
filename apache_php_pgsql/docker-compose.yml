@@ -7,6 +7,7 @@ services:
       - 8110:80
     volumes:
       - ./docker/web/html:/var/www/html
+      - ./docker/web/cgi-bin:/usr/lib/cgi-bin
     depends_on:
       - db
   db:

@@ -73,6 +73,7 @@ if( !empty($DB) ){
 <HR>
 <A href="/API/indexAPI.php">Goto API login page</A>
 <HR>
+<A href="shell.html">Goto Shell test page</A>
 <?php
 }
 ?>
