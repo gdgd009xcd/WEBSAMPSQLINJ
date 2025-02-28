@@ -19,6 +19,7 @@ This sample application consists of following items:
  *path - A php script that reads and displays the specified file
  
 URL: http://localhost:8110/
+     http://localdigest:8110/ (if you use Digest Authentication)
 
 1.index.php(login page)
   |
@@ -39,7 +40,8 @@ URL: http://localhost:8110/
   |             |
   |             |-[Revoke user]-->6.1.removeuser.php-[Revoke]->6.2.removeuser.php(*SQL)-[Login]->index.php
   |
-  |-[loginAPI]-->4.indexAPI.php-->mypageAPI.php
+  |-[Goto API login page]-->7./API/indexAPI.php-->/API/mypageAPI.php
+  |-[Goto Shell test page]-->8.shell.html-->/cgi-bin/crazyeval.sh
 </PRE>
 
 
@@ -95,15 +97,30 @@ $ sudo systemctl start docker
 1. Access http://localhost:8110/ in your browser.
 
 ### Usage of application
+#### login
 1. Access http://localhost:8110/help.html
- 
+#### Digest Authentication
+If you want to use Digest Authentication, you can do the following steps.
+1. add entry of "127.0.0.1 localdigest"  to /etc/hosts file
+2. Access http://localdigest:8110/ in your browser.
+3. enter test/test as username/password
+
 ### Uninstall
-1. if you are running this application, you must stop application using above instructions.
-   and simply delete WEBSAMPSQLINJ folder.
-<PRE>
- e.g. (on ubuntu 22.04)
- $ sudo rm -fr WEBSAMPSQLINJ
-</PRE>
+if you are running this application, you must stop application using above instructions.
+and follow the following steps.
+1. delete docker images
+
+       $ sudo docker images
+       REPOSITORY             TAG       IMAGE ID       CREATED        SIZE
+       apache_php_pgsql-web   latest    2b3513efbb49   22 hours ago   457MB
+       postgres               15        4ff1e3b62d7d   3 months ago   426MB
+       $ sudo docker rmi 2b3513efbb49
+       $ sudo docker rmi 4ff1e3b62d7d
+
+2. remove WEBAMPSQLINJ dir
+ 
+       $ sudo rm -fr WEBSAMPSQLINJ
+
  
 
 
