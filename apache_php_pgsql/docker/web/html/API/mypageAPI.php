@@ -131,7 +131,7 @@ $_SESSION['htoken'] = $htoken;
 
 
 ?>
-<html>
+<!DOCTYPE html>
 <head>
 <title>
 MYPAGE
@@ -209,6 +209,7 @@ if ($sqlprint == 1) {
 <form action="../moduser.php" method="GET">
 Modify your account info :
 <input type="submit" value="Modify your account info">
+<input type="HIDDEN" name="foo" value="x" />
 </form><BR>
 <form action="moduser.php" method="GET">
 Modify your age :
@@ -221,17 +222,20 @@ Modify your age :
 <input type="hidden" name="token1" value="<?php echo $randomval; ?>">
 Regist your entry :
 <input type="submit"  value="Regist entry">
+<input type="HIDDEN" name="foo" value="x" />
 </form>
 <HR>
 
 <form action="../inquirylist.php" method="GET">
 Show your registered entries :
 <input type="submit"  value="Show your registered Entry List">
+<input type="HIDDEN" name="foo" value="x" />
 </form>
 <HR>
 <form action="../removeuser.php" method="GET">
 Revoke your account :
 <input type="submit" value="Revoke user">
+<input type="HIDDEN" name="foo" value="x" />
 </form>
 <HR>
 <P>

@@ -27,7 +27,7 @@ $randomval = sha1(uniqid(rand(), true));
 
 ?>
 
-<html>
+<!DOCTYPE html>
 <head>
 <title>
 login page
