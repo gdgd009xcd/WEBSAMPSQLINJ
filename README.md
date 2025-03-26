@@ -113,6 +113,8 @@ If you want to use Digest Authentication, you can do the following steps.
 select menu Include Site In Context -> New Context
 3. select "Authentication" property in newly created Context and setup as following image<br> 
 ![property](assets/images/HTTPAuthDialogZAP.png)
+4. select "Users" property, add user as following image<br>
+![users](assets/images/UserAdd.png)
 4. download [removeAuthHeader script](removeAuthenticationHeader.js)
 5. paste script to ~/.ZAP/scripts/scripts/httpsender folder.
 6. to enable script, load this script on script tab, setup as following image.<br> 
