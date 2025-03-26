@@ -104,6 +104,19 @@ If you want to use Digest Authentication, you can do the following steps.
 1. add entry of "127.0.0.1 localdigest"  to /etc/hosts file
 2. Access http://localdigest:8110/ in your browser.
 3. enter test/test as username/password
+#### Configuring Digest Authentication in ZAPROXY
+1. access as described in the "Digest Authentication" section above.
+2. select site tree entry named http://localdigest:8110/ and right-click<br> 
+select menu Include Site In Context -> New Context
+3. select "Authentication" property in newly created Context and setup as following image<br> 
+![property](assets/images/HTTPAuthDialogZAP.png)
+4. download [removeAuthHeader script](removeAuthenticationHeader.js)
+5. paste script to ~/.ZAP/scripts/scripts/httpsender folder.
+6. to enable script, load this script on script tab, setup as following image.<br> 
+![script](assets/images/RemoveAuthHeaderScript.png)
+7. enable forced user mode as following image.<br> 
+![forced user](assets/images/ForceUserIcons.png)
+8. now you can send authenticated request with zaproxy. and you can configure any other BASIC/Digest/NTML authentication by using this method.
 
 ### Uninstall
 if you are running this application, you must stop application using above instructions.
