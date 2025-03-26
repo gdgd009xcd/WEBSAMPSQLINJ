@@ -108,7 +108,7 @@ If you want to use Digest Authentication, you can do the following steps.
 3. enter test/test as username/password
 
 #### Configuring Digest Authentication in ZAPROXY
-1. access as described in the "Digest Authentication" section above.
+1. start ZAPROXY and access through ZAPROXY as described in the "Digest Authentication" section above.
 2. select site tree entry named http://localdigest:8110/ and right-click<br> 
 select menu Include Site In Context -> New Context
 3. select "Authentication" property in newly created Context and setup as following image<br> 
