@@ -97,13 +97,16 @@ $ sudo systemctl start docker
 1. Access http://localhost:8110/ in your browser.
 
 ### Usage of application
-#### login
-1. Access http://localhost:8110/help.html
+#### HOW to use
+1. refer http://localhost:8110/help.html
+
 #### Digest Authentication
 If you want to use Digest Authentication, you can do the following steps.
+
 1. add entry of "127.0.0.1 localdigest"  to /etc/hosts file
 2. Access http://localdigest:8110/ in your browser.
 3. enter test/test as username/password
+
 #### Configuring Digest Authentication in ZAPROXY
 1. access as described in the "Digest Authentication" section above.
 2. select site tree entry named http://localdigest:8110/ and right-click<br> 
@@ -121,6 +124,7 @@ select menu Include Site In Context -> New Context
 ### Uninstall
 if you are running this application, you must stop application using above instructions.
 and follow the following steps.
+
 1. delete docker images
 
        $ sudo docker images
